@@ -13,25 +13,28 @@
 
     <title>Frontend Mentor | Stats preview card component</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Lexend+Deca&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca&display=swap"
       rel="stylesheet"
     />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap"
-      rel="stylesheet"
-    />
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <main class="card">
-      <section class="card__image">
-        <picture>
+
+  <body
+    class="font-[Inter] bg-[var(--navy-950)] flex justify-center items-center min-h-screen m-8 lg:overflow-y-hidden"
+  >
+    <section
+      class="bg-[var(--blue-950)] rounded-xl max-w-96 w-full overflow-hidden lg:flex lg:max-w-6xl lg:flex-row-reverse"
+    >
+      <header class="aspect-square relative">
+        <picture class="">
           <source
             srcset="./images/image-header-desktop.jpg"
-            media="(min-width: 620px)"
+            media="(min-width: 768px)"
           />
           <img
             src="./images/image-header-mobile.jpg"
@@ -39,34 +42,67 @@
             loading="lazy"
             width="654"
             height="480"
-            class="card__img"
+            class="w-full h-full object-cover"
           />
         </picture>
-      </section>
-      <section class="card__content">
-        <h1 class="card__title">
-          Get <span class="card__title--highlight">insights</span> that help
-          your business grow.
-        </h1>
-        <p class="card__description">
-          Discover the benefits of data analytics and make better decisions
-          regarding revenue, customer experience, and overall efficiency.
-        </p>
-        <footer class="card__stats">
-          <div class="card__stat">
-            <span class="card__stat-value">10k+</span>
-            <span class="card__stat-label">companies</span>
+
+        <div
+          class="absolute inset-0 bg-[var(--purple-500)] mix-blend-multiply"
+        ></div>
+      </header>
+
+      <section
+        class="p-8 text-center lg:flex lg:flex-col lg:p-16 lg:flex-1 lg:justify-evenly lg:text-left"
+      >
+        <div>
+          <h1 class="text-3xl font-bold text-[var(--white-100)] lg:text-4xl">
+            Get <span class="text-[var(--purple-500)]">insights</span> that help
+            your business grow.
+          </h1>
+
+          <p class="mt-4 text-[var(--white-75)]">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+        </div>
+
+        <footer
+          class="flex flex-col gap-8 mt-8 lg:flex-row lg:justify-start lg:gap-24"
+        >
+          <div class="flex flex-col lg:items-start">
+            <span
+              class="text-[var(--white-100)] font-bold text-2xl tracking-wider"
+              >10k+</span
+            >
+            <span
+              class="font-[Lexend_Deca] text-[var(--white-60)] mt-1 text-sm uppercase tracking-wider"
+              >companies</span
+            >
           </div>
-          <div class="card__stat">
-            <span class="card__stat-value">314</span>
-            <span class="card__stat-label">templates</span>
+
+          <div class="flex flex-col lg:items-start">
+            <span
+              class="text-[var(--white-100)] font-bold text-2xl tracking-wider"
+              >314</span
+            >
+            <span
+              class="font-[Lexend_Deca] text-[var(--white-60)] mt-1 text-sm uppercase tracking-wider"
+              >templates</span
+            >
           </div>
-          <div class="card__stat">
-            <span class="card__stat-value">12M+</span>
-            <span class="card__stat-label">queries</span>
+
+          <div class="flex flex-col lg:items-start">
+            <span
+              class="text-[var(--white-100)] font-bold text-2xl tracking-wider"
+              >12M+</span
+            >
+            <span
+              class="font-[Lexend_Deca] text-[var(--white-60)] mt-1 text-sm uppercase tracking-wider mb-8 lg:mb-0"
+              >queries</span
+            >
           </div>
         </footer>
       </section>
-    </main>
+    </section>
   </body>
 </html>
